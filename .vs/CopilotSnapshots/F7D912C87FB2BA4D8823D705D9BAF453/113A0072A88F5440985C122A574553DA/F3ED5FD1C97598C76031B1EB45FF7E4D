@@ -1,0 +1,93 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ejercicio5
+{
+    public partial class Form1 : Form
+    {
+ 
+        private string[] nombresConsulta = { "Ana Torres" , "Luis Ramos" , "María Díaz" };
+        private double[] notasConsulta = { 18, 14, 11 };
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        public void label2_Click(object sender, EventArgs e)
+        {
+
+
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            // Normaliza el texto ingresado:
+            // quitar espacios extremos y convertir a minúsculas.
+            string buscado = txtBuscar.Text.Trim().ToLower();
+
+            // Valida que el usuario haya escrito algo antes de buscar.
+            if (buscado == "")
+            {
+                lblResultado.Text = "Escribe un nombre para buscar.";
+                txtBuscar.Focus();
+                return;
+            }
+
+            // -1 significa que todavía no se encontró al estudiante.
+            int posicion = -1;
+
+            // Recorre el arreglo de nombres.
+            for (int i = 0; i < nombresConsulta.Length; i++)
+            {
+                // Normaliza el nombre actual.
+                string nombreActual = nombresConsulta[i].ToLower();
+
+                // Busca coincidencia parcial.
+                if (nombreActual.Contains(buscado))
+                {
+                    posicion = i;
+
+                    // Detiene la búsqueda al encontrar la primera coincidencia.
+                    break;
+                }
+            }
+
+            // Si la posición cambió, el estudiante fue encontrado.
+            if (posicion != -1)
+            {
+                // Usa la misma posición para mostrar la nota del arreglo paralelo.
+                lblResultado.Text = $"Nota: {notasConsulta[posicion]:F2}";
+            }
+            else
+            {
+                lblResultado.Text = "Estudiante no encontrado.";
+            }
+        }
+
+        private void btnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            // Limpia el cuadro de búsqueda y el resultado.
+            txtBuscar.Clear();
+            lblResultado.Text = "Resultado: -";
+            txtBuscar.Focus();
+        }
+
+        private void MostrarDatosConsulta()
+        {
+            // Muestra los estudiantes registrados en el ListBox.
+            lstDatos.Items.Clear();
+
+            for (int i = 0; i < nombresConsulta.Length; i++)
+            {
+                lstDatos.Items.Add($"{nombresConsulta[i]} - Nota: {notasConsulta[i]:F2}");
+            }
+        }
+
+    }
+}

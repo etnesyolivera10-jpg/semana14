@@ -1,0 +1,9 @@
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\bin\Debug\ejercicio6.exe.config
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\bin\Debug\ejercicio6.exe
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\bin\Debug\ejercicio6.pdb
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.csproj.AssemblyReference.cache
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.Form1.resources
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.csproj.GenerateResource.cache
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.csproj.CoreCompileInputs.cache
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.exe
+C:\Users\etnes\OneDrive\Desktop\visual studio\semana14\Ejercicio 4\ejercicio6\obj\Debug\ejercicio6.pdb
